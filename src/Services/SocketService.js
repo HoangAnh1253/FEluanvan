@@ -4,8 +4,8 @@ import { ListenType } from '~/Enums/ListenType';
 import ExamService from './ExamService';
 import LocalStorageService from './LocalStorageService';
 
-// const ENDPOINT = 'http://acme.com';
-const ENDPOINT = 'localhost:3005';
+const ENDPOINT = 'http://acme.com';
+// const ENDPOINT = 'localhost:3005';
 
 export default class SocketService {
     roomId = '';
