@@ -57,8 +57,6 @@ const WaitRoom = () => {
             socketService.roomMembers = response.users;
             setUsersInRoom(response.users);
             setMode(response.modeInRoom);
-
-            console.log('user in room: ', response.users);
         });
     }, []);
 
@@ -70,6 +68,7 @@ const WaitRoom = () => {
 
     React.useEffect(()=>{
         socketService.socket.on(ListenType.SERVER_SEND_AVAILABLE_USERS, availableUsers => {
+            availableUsers = availableUsers.filter(user => user.email);
             setUsers(availableUsers);
             handleOpenInvitationUsersModal();
         })

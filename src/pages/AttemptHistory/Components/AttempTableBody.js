@@ -69,7 +69,7 @@ function AttemptTableBody(props) {
                 </TableCell>
             </TableRow>
             <TableRow>
-                <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={12}>
+                <TableCell style={{ paddingBottom: 0, paddingTop: 0}} colSpan={12}>
                     <Collapse in={collapse} timeout="auto">
                         <Box mt={2}>
                             <Table className="detail-attempt-history-table" size="small" aria-label="purchases">
